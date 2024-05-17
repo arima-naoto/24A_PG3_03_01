@@ -1,12 +1,13 @@
 #include <iostream>
 #include <List>
 #include <string>
+#include <vector>
 using namespace std;
 
 int main() 
 {
 	//山手線の駅名を全て英語で宣言する
-	list<string> stationName = {
+	list<const char*> stationName = {
 		"ToKyo","Kanda","Akihabara","OkaChiMachi","Ueno",
 		"Uguisudani","Nippori","Tabata","Komagome","Sugamo"
 		"Otsuka","Ikebukuro","Mejiro","Takadanobaba","Shin-Okubo",
@@ -23,7 +24,7 @@ int main()
 	}
 
 	//任意の位置に要素を追加する処理
-	for (list<string>::iterator itr = stationName.begin(); itr != stationName.end(); ++itr) 
+	for (list<const char*>::iterator itr = stationName.begin(); itr != stationName.end(); ++itr) 
 	{
 		//インテレータが田端駅だった場合
 		if (*itr == "Tabata") 
@@ -43,7 +44,7 @@ int main()
 	}
 
 	//任意の位置に要素を追加する処理
-	for (list<string>::iterator itr = stationName.begin(); itr != stationName.end(); ++itr)
+	for (list<const char*>::iterator itr = stationName.begin(); itr != stationName.end(); ++itr)
 	{
 		//インテレータが田町駅だった場合
 		if (*itr == "Tamati")
